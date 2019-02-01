@@ -24,4 +24,4 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // --- PUERTO DE ESCUCHA
-app.listen(3001, () => console.log('Servidor iniciado en puerto 3000'));
+app.listen(3001, () => console.log('Servidor iniciado en puerto 3001'));
