@@ -193,12 +193,12 @@ label#menu-inicio-label > span::after {
   content: " Inicio"; 
 }
 
-label#menu-articulos-label > span::after {
-  content: " Artículos"; 
+label#menu-producto-label > span::after {
+  content: " Producto"; 
 }
 
-label#menu-clientes-label > span::after {
-  content: " Clientes"; 
+label#menu-proveedor-label > span::after {
+  content: " Proveedor"; 
 }
 
 
@@ -274,10 +274,10 @@ DISEÑO DE TABLAS ADAPTATIVO
   padding: 4px 8px;
 }
 
-.sort-table th.articulos-nombre,
-.sort-table th.articulos-precio,
-.sort-table th.clientes-nombre,
-.sort-table th.clientes-apellidos
+.sort-table th.producto-nombre,
+.sort-table th.producto-precio,
+.sort-table th.proveedor-nombre,
+.sort-table th.proveedor-apellidos
  {
   width: 30% !important;
 }
@@ -286,14 +286,14 @@ DISEÑO DE TABLAS ADAPTATIVO
   width: 40% !important;
 }
 
-.sort-table .articulos-nombre,
-.sort-table .clientes-nombre  
+.sort-table .producto-nombre,
+.sort-table .proveedor-nombre  
 {
   font-weight: bold;
 }
 
-.sort-table .articulos-nombre small,
-.sort-table .clientes-nombre small {
+.sort-table .producto-nombre small,
+.sort-table .proveedor-nombre small {
   font-weight: normal;
 }
 
@@ -301,8 +301,8 @@ DISEÑO DE TABLAS ADAPTATIVO
 /* Responsive table full */
 @media (max-width: 767px) {
   label#menu-inicio-label    > span::after,
-  label#menu-articulos-label > span::after,
-  label#menu-clientes-label  > span::after 
+  label#menu-producto-label > span::after,
+  label#menu-proveedor-label  > span::after 
   {
     content: none; 
   }
@@ -395,29 +395,29 @@ DISEÑO DE TABLAS ADAPTATIVO
     padding: 10px;
   }
 
-  .sort-table th.articulos-nombre,
-  .sort-table th.articulos-precio,
-  .sort-table th.clientes-nombre,
-  .sort-table th.clientes-apellidos,
+  .sort-table th.producto-nombre,
+  .sort-table th.producto-precio,
+  .sort-table th.proveedor-nombre,
+  .sort-table th.proveedor-apellidos,
   .sort-table th.operacion {
     width: 100px !important;
   }
 
-  .sort-table td.articulos-nombre:before,
-  .sort-table td.clientes-nombre:before
+  .sort-table td.producto-nombre:before,
+  .sort-table td.proveedor-nombre:before
   {
     display: none;
   }
 
-  .sort-table td.articulos-nombre,
-  .sort-table td.clientes-nombre
+  .sort-table td.producto-nombre,
+  .sort-table td.proveedor-nombre
   {
     letter-spacing: .03em;
     padding-left: 14px;
   }
 
-  .sort-table td.articulos-nombre > input 
-  .sort-table td.clientes-nombre > input
+  .sort-table td.producto-nombre > input 
+  .sort-table td.proveedor-nombre > input
   {
     font-weight:bold;
   }

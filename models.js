@@ -9,7 +9,7 @@ const Proveedor = mongoose.model('Proveedor', {
 
 const Producto = mongoose.model('Producto', {
     nombre: String,
-    precio: Number,
+    precio: NumbProveedorer,
     cantidad: Number,
     disponibilidad: Boolean
 });

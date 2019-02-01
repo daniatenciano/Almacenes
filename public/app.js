@@ -6,21 +6,21 @@
 
 
 let colecciones = {
-    producto: { nombre: 'string', precio: 'number', cantidad: 'number', disponibilidad: 'boolean' },
-    proveedor: { nombre: 'string', apellidos: 'string', edad:'number', dni:'String' }
+    producto: { nombre: 'string', precio: 'number' },
+    proveedor: { nombre: 'string', apellidos: 'string' }
 };
 
 let index = `
      <div style="margin: 50px">
-         <h1>Tiendaw</h1>
-         <small><b>Ejemplo didáctico: PWA y Fullstack MEN (MongoDB + Express + NodeJS) </b></small>
+         <h1>Almacenes Atenciano</h1>
+         <small><b>Ejemplo de almacenes: PWA y Fullstack MEN (MongoDB + Express + NodeJS) </b></small>
          <br><br>
          <p>Esta SPA (Single Page Application) ofrece 3 opciones:</p>
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
-           <li><b>Producto</b>: Permite realizar operaciones CRUD sobre los artículos de la BD. </li>
-           <li><b>Proveedores</b>: Permite realizar operaciones CRUD sobre los clientes de la BD.</li>
+           <li><b>Producto</b>: Permite realizar operaciones CRUD sobre los productos de la BD. </li>
+           <li><b>Proveedor</b>: Permite realizar operaciones CRUD sobre los proveedores de la BD.</li>
          </ul>
      </div>`;
 
