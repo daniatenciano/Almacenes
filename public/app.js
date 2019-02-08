@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
         c.style.display = 'none';  c.innerHTML = '';       
     });
 
-    document.getElementById('menu-proovedor').addEventListener('click', function (e) {
+    document.getElementById('menu-proveedor').addEventListener('click', function (e) {
         verDocumentos('proveedor');
         c.style.display = 'block';
         i.style.display = 'none';  
