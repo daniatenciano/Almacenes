@@ -17,6 +17,16 @@ mongoose.connect(config.db_uri, { useNewUrlParser: true })
 // Archivos estáticos. Deberás crear un archivo public/index.html para ver el resultado
 app.use(express.static(path.join(__dirname, 'public')));
 
+// --- MIDDLEWARE
+// Para redirigir trafico HTTP a HTTPS
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https')
+    res.redirect(`https://${req.header('host')}${req.url}`);
+  else
+    next();
+});
+
+
 //Rutas
 app.use('/api', routes);
 app.use(express.json());
