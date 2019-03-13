@@ -36,7 +36,7 @@ body {
 nav {  
   padding: 10px;
   _background-color: var(--bgcolor-menu);
-  background-color: #2196f3;
+  background-color: #ec0115;
   width: 100%;
   position: fixed;
   font-weight: bolder;
@@ -145,8 +145,8 @@ button.insertar {
 }
 
 button.modificar {
-  border: 1px solid #0085a6;
-  color: #0085a6;
+  border: 1px solid #ec0115;
+  color: #ec0115;
   content: " Modificar"; 
 }
 
