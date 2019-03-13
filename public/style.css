@@ -26,7 +26,8 @@ html {
 }
 
 body {
-  background: #8CDEF9;
+  background-image: url("fondo.jpg");
+  /*background: #8CDEF9;*/
   color: #333;
   -webkit-font-smoothing: antialiased;
   line-height: 1.42857143;
