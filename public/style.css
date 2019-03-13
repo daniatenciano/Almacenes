@@ -227,8 +227,8 @@ DISEÑO DE TABLAS ADAPTATIVO
     width:100%; 
     max-width:100%;
   }
-  table thead tr {border-bottom:3px solid #0085a6; color:#000;}
-  table tfoot tr {border-top:3px solid #0085a6;}
+  table thead tr {border-bottom:3px solid #F90C0C; color:#000;}
+  table tfoot tr {border-top:3px solid #F90C0C;}
   table thead th, table tfoot th {
     background-color:#fff;
     color:#000;
