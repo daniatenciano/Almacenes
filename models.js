@@ -11,7 +11,7 @@ const Producto = mongoose.model('Producto', {
     nombre: String,
     precio: Number,
     cantidad: Number,
-    disponibilidad: Boolean
+    disponibilidad: String
 });
 
 module.exports = {

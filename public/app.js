@@ -6,8 +6,8 @@
 
 
 let colecciones = {
-    producto: { nombre: 'string', precio: 'number' },
-    proveedor: { nombre: 'string', apellidos: 'string' }
+    productos: { nombre: 'string', precio: 'number' },
+    proveedores: { nombre: 'string', apellidos: 'string' }
 };
 
 let index = `
@@ -29,8 +29,8 @@ let index = `
 window.addEventListener('load', function () {
 
     let i = document.getElementById('inicio');
-    let a = document.getElementById('producto');
-    let c = document.getElementById('proveedor');
+    let a = document.getElementById('productos');
+    let c = document.getElementById('proveedores');
 
     i.innerHTML = index;
     i.style.display = 'block';
@@ -42,14 +42,14 @@ window.addEventListener('load', function () {
     });
 
     document.getElementById('menu-producto').addEventListener('click', function (e) {
-        verDocumentos('producto');
+        verDocumentos('productos');
         a.style.display = 'block';
         i.style.display = 'none';
         c.style.display = 'none';  c.innerHTML = '';       
     });
 
     document.getElementById('menu-proveedor').addEventListener('click', function (e) {
-        verDocumentos('proveedor');
+        verDocumentos('proveedores');
         c.style.display = 'block';
         i.style.display = 'none';  
         a.style.display = 'none';  a.innerHTML = '';

@@ -1,26 +1,26 @@
 const express = require('express');
 
-const { Proveedor } = require('./models');
+const { Proveedor, Producto } = require('./models');
 
 const router = express.Router();
 
 // ver todos los proveedores
-router.get('/proveedor', (req, res) => {
+router.get('/proveedores', (req, res) => {
     Proveedor.find({}, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
     });
 });
 // ver todos los productos
-router.get('/producto', (req, res) => {
-    Proveedor.find({}, (err, data) => {
+router.get('/productos', (req, res) => {
+    Producto.find({}, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
     });
 });
 
 // ver un proveedores
-router.get('/proveedor/:id', (req, res) => {
+router.get('/proveedores/:id', (req, res) => {
     Proveedor.findOne({ _id: req.params.id }, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
@@ -28,15 +28,15 @@ router.get('/proveedor/:id', (req, res) => {
 });
 
 // ver un producto
-router.get('/producto/:id', (req, res) => {
-    Proveedor.findOne({ _id: req.params.id }, (err, data) => {
+router.get('/productos/:id', (req, res) => {
+    Producto.findOne({ _id: req.params.id }, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
     });
 });
 
 // eliminar un proveedores
-router.delete('/proveedor/:id', (req, res) => {
+router.delete('/proveedores/:id', (req, res) => {
     Proveedor.findOneAndRemove({ _id: req.params.id }, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
@@ -44,15 +44,15 @@ router.delete('/proveedor/:id', (req, res) => {
 });
 
 // eliminar un producto
-router.delete('/producto/:id', (req, res) => {
-    Proveedor.findOneAndRemove({ _id: req.params.id }, (err, data) => {
+router.delete('/productos/:id', (req, res) => {
+    Producto.findOneAndRemove({ _id: req.params.id }, (err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
     });
 });
 
 // actualizar un proveedores
-router.put('/proveedor/:id', (req, res) => {
+router.put('/proveedores/:id', (req, res) => {
     Proveedor.findOneAndUpdate(
         { _id: req.params.id },
         { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos, edad: req.body.edad, dni: req.body.dni} },
@@ -63,8 +63,8 @@ router.put('/proveedor/:id', (req, res) => {
 });
 
 // actualizar un producto
-router.put('/producto/:id', (req, res) => {
-    Proveedor.findOneAndUpdate(
+router.put('/productos/:id', (req, res) => {
+    Producto.findOneAndUpdate(
         { _id: req.params.id },
         { $set: { precio: req.body.precio, cantidad: req.body.cantidad, disponibilidad: req.body.disponibilidad} },
         (err, data) => {
@@ -74,7 +74,7 @@ router.put('/producto/:id', (req, res) => {
 });
 
 // insertar un proveedores
-router.post('/proveedor', (req, res) => {
+router.post('/proveedores', (req, res) => {
     const proveedor = new Proveedor({ 
                           nombre: req.body.nombre, 
                           apellidos: req.body.apellidos, 
@@ -89,8 +89,9 @@ router.post('/proveedor', (req, res) => {
 });
 
 // insertar un producto
-router.post('/producto', (req, res) => {
+router.post('/productos', (req, res) => {
     const producto = new Producto({ 
+                          nombre: req.body.precio, 
                           precio: req.body.precio, 
                           cantidad: req.body.cantidad, 
                           disponibilidad: req.body.disponibilidad
