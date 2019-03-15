@@ -3,9 +3,11 @@
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
-const routes = require('./routes');
-const config = require('./config');
 const mongoose = require('mongoose');
+const config = require('./config');
+const routes = require('./routes');
+
+
 
 const app = express();
 
@@ -20,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // --- MIDDLEWARE
 // Para redirigir trafico HTTP a HTTPS
 app.use((req, res, next) => {
-  if (req.header('x-forwarded-proto') !== 'https')
+  if (req.header('x-forwarded-proto') !== 'https' && process.env.PORT)
     res.redirect(`https://${req.header('host')}${req.url}`);
   else
     next();
@@ -28,10 +30,11 @@ app.use((req, res, next) => {
 
 
 //Rutas
-app.use('/api', routes);
 app.use(express.json());
+app.use('/api', routes);
+
 // Logger
 app.use(morgan('dev'));
 
 // --- PUERTO DE ESCUCHA
-app.listen(config.port, () => console.log('Servidor iniciado en puerto 3000'));
+app.listen(config.port, () => console.log('Servidor iniciado en puerto ' + config.port));
